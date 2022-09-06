@@ -1,0 +1,18 @@
+.navbar {
+  background-color: rgba(255, 38, 37, 0.1);
+}
+
+.navbar-logo {
+  width: 48px;
+  height: 48px;
+  margin: 0 20px;
+}
+
+.navbar-link-active {
+  border-bottom: 3px solid #ff2625;
+}
+
+.navbar-link {
+  text-decoration: none;
+  color: #3a1212;
+}

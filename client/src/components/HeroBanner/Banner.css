@@ -1,0 +1,38 @@
+#dumbbell1 {
+  animation: dumbbell1 1s linear 1s infinite alternate;
+}
+
+#dumbbell2 {
+  animation: dumbbell2 1s linear infinite alternate;
+}
+
+#barbell {
+  animation: barbell 1s linear infinite alternate;
+}
+
+@keyframes dumbbell1 {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(10deg);
+  }
+}
+
+@keyframes dumbbell2 {
+  from {
+    transform: rotateX(0deg);
+  }
+  to {
+    transform: rotateX(10deg);
+  }
+}
+
+@keyframes barbell {
+  from {
+    transform: translateY(0px);
+  }
+  to {
+    transform: translateY(25px);
+  }
+}

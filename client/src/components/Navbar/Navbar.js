@@ -31,7 +31,7 @@ function Navbar({ navigate }) {
       alignItems="center"
       sx={{
         gap: { sm: "122px", xs: "40px" },
-        p: { sm: "30px", cs: "18px" },
+        p: { sm: "15px", xs: "22px" },
       }}
       px="20px"
     >

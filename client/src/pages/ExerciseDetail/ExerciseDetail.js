@@ -45,10 +45,15 @@ function ExerciseDetail() {
     };
 
     fetchExercisesData();
-  }, [id]);
+  }, [id, exerciseDetail]);
 
   return (
-    <Box className="exerciseDetail">
+    <Box
+      className="exerciseDetail"
+      width="400px"
+      sx={{ width: { xl: "1488px" } }}
+      m="auto"
+    >
       <Detail exerciseDetail={exerciseDetail} />
       <ExerciseVideos
         exerciseVideos={exerciseVideos}

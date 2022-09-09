@@ -1,6 +1,6 @@
 import React from "react";
 import { Button, Grid, Stack, Typography } from "@mui/material";
-import PersonalTrainer from "./PersonalTrainer";
+import ExploringPerson from "./ExploringPerson";
 
 function FindTrainer({ navigate }) {
   function handleClick(e) {
@@ -15,6 +15,7 @@ function FindTrainer({ navigate }) {
       justifyContent="center"
       alignItems="center"
       textAlign="center"
+      backgroundColor="#FFE3E4"
       sx={{
         minHeight: {
           xs: "500px",
@@ -30,15 +31,13 @@ function FindTrainer({ navigate }) {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item md={4}>
-          <PersonalTrainer />
-        </Grid>
         <Grid item lg={8} md={12}>
           <Stack justifyContent="center" alignItems="center" textAlign="center">
-            <Typography variant="h2">Hire A Trainer</Typography>
+            <Typography variant="h2">Explore Exercises</Typography>
             <Typography variant="h5" m="40px">
-              Do you think your workouts are not effective? <br />
-              Do you need a trainer to monitor your workouts?
+              Browse over more than 1300 exercises.
+              <br />
+              Find exercises related by muscle or equipment.
             </Typography>
             <Button
               variant="contained"
@@ -47,10 +46,13 @@ function FindTrainer({ navigate }) {
               sx={{ backgroundColor: "#ff2625", padding: "10px" }}
             >
               <Typography variant="h5" mx="20px">
-                Hire A Trainer
+                Browse Now
               </Typography>
             </Button>
           </Stack>
+        </Grid>
+        <Grid item md={4}>
+          <ExploringPerson />
         </Grid>
       </Grid>
     </Stack>

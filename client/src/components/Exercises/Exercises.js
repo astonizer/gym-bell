@@ -65,7 +65,7 @@ function Exercises({ exercises, setExercises, bodyPart }) {
         flexWrap="wrap"
         justifyContent="center"
       >
-        {currentExercises ? (
+        {currentExercises.length ? (
           currentExercises.map((exercise, id) => (
             <ExerciseCard key={id} exercise={exercise} />
           ))

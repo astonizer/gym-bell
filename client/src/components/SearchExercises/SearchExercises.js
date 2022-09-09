@@ -5,6 +5,7 @@ import { fetchExerciseData } from "../../utils/fetchData";
 import { BODY_PART_LIST, EXERCISES_LIST } from "../../urls/exercise";
 
 import HorizontalScrollBar from "../HorizontalScrollBar/HorizontalScrollBar";
+import Loader from "../Loader/Loader";
 
 function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
   const [search, setSearch] = useState("");
@@ -103,12 +104,16 @@ function SearchExercises({ setExercises, bodyPart, setBodyPart }) {
         </Button>
       </Box>
       <Box sx={{ position: "relative", width: "100%", p: "20px" }}>
-        <HorizontalScrollBar
-          data={bodyParts}
-          bodyPart={bodyPart}
-          setBodyPart={setBodyPart}
-          isBodyPart
-        />
+        {bodyParts.length ? (
+          <HorizontalScrollBar
+            data={bodyParts}
+            bodyPart={bodyPart}
+            setBodyPart={setBodyPart}
+            isBodyPart
+          />
+        ) : (
+          <Loader />
+        )}
       </Box>
     </Stack>
   );

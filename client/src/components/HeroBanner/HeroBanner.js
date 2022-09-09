@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, Stack, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 
 import Banner from "./Banner";
 import "./Banner.css";
+import SearchGymInput from "../SearchGymInput/SearchGymInput";
 
-function HeroBanner() {
+function HeroBanner({ navigate }) {
   return (
     <Box width="400px" sx={{ width: { xl: "1488px" } }} m="auto">
       <Box
@@ -14,7 +15,7 @@ function HeroBanner() {
         p="20px"
       >
         <Typography color="#ff2625" fontWeight="600" fontSize="26px">
-          Fitness Club
+          Fitness Network
         </Typography>
         <Typography
           mb="23px"
@@ -25,16 +26,9 @@ function HeroBanner() {
           Sweat, Smile <br /> and Repeat
         </Typography>
         <Typography fontSize="22px" mb={4} lineHeight="35px">
-          Check out the most effective exercises
+          Become a part of this new fitness generation
         </Typography>
-        <Button
-          variant="contained"
-          color="error"
-          href="#exercises"
-          sx={{ backgroundColor: "#ff2625", padding: "10px" }}
-        >
-          Explore Exercises
-        </Button>
+        <SearchGymInput navigate={navigate} />
         <Typography
           fontSize="200px"
           fontWeight={600}

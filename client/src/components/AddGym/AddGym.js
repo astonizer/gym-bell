@@ -1,16 +1,17 @@
 import React from "react";
 import { Button, Grid, Stack, Typography } from "@mui/material";
-import PersonalTrainer from "./PersonalTrainer";
+import Owner from "./Owner";
 
-function FindTrainer({ navigate }) {
+function AddGym({ navigate }) {
   function handleClick(e) {
     e.preventDefault();
-    navigate("/trainer");
+    navigate("/gym/add");
   }
 
   return (
     <Stack
       className="addGym"
+      backgroundColor="#FFE3E4"
       direction="row"
       justifyContent="center"
       alignItems="center"
@@ -30,15 +31,12 @@ function FindTrainer({ navigate }) {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item md={4}>
-          <PersonalTrainer />
-        </Grid>
         <Grid item lg={8} md={12}>
           <Stack justifyContent="center" alignItems="center" textAlign="center">
-            <Typography variant="h2">Hire A Trainer</Typography>
+            <Typography variant="h2">Gym Owner?</Typography>
             <Typography variant="h5" m="40px">
-              Do you think your workouts are not effective? <br />
-              Do you need a trainer to monitor your workouts?
+              List your gym for FREE and benefit from <br />
+              our marketing, reaching a wider audience.
             </Typography>
             <Button
               variant="contained"
@@ -47,14 +45,17 @@ function FindTrainer({ navigate }) {
               sx={{ backgroundColor: "#ff2625", padding: "10px" }}
             >
               <Typography variant="h5" mx="20px">
-                Hire A Trainer
+                List Your Gym Today
               </Typography>
             </Button>
           </Stack>
+        </Grid>
+        <Grid item md={4}>
+          <Owner />
         </Grid>
       </Grid>
     </Stack>
   );
 }
 
-export default FindTrainer;
+export default AddGym;

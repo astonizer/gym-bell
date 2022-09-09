@@ -10,17 +10,16 @@ function WhyCard({ cardContent, id }) {
     switch (id) {
       case 0:
         return (
-          <AirplaneTicketIcon fontSize="large" style={{ color: "#FF2625" }} />
+          <AirplaneTicketIcon style={{ color: "#FF2625", fontSize: "3em" }} />
         );
       case 1:
         return (
-          <TravelExploreIcon fontSize="large" style={{ color: "#FF2625" }} />
+          <TravelExploreIcon style={{ color: "#FF2625", fontSize: "3em" }} />
         );
       case 2:
         return (
           <SportsMartialArtsIcon
-            fontSize="large"
-            style={{ color: "#FF2625" }}
+            style={{ color: "#FF2625", fontSize: "3em" }}
           />
         );
       default:
@@ -49,17 +48,18 @@ function WhyCard({ cardContent, id }) {
           <Card
             sx={{
               width: {
+                xl: 470,
                 lg: 345,
-                md: 250,
+                md: 270,
                 sm: 580,
                 xs: 350,
               },
               height: {
-                md: 200,
-                sm: 150,
+                md: 214,
+                sm: 170,
               },
-              borderRadius: "20px",
-              boxShadow: 4,
+              borderRadius: "10px",
+              boxShadow: 2,
             }}
           >
             <CardContent>

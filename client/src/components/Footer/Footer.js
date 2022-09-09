@@ -4,7 +4,7 @@ import Logo from "../../assets/images/Logo.png";
 
 function Footer() {
   return (
-    <Box className="footer" mt="80px" bgcolor="#fff3f4">
+    <Box className="footer" mt="80px" bgcolor="#FFE3E4">
       <Stack gap="40px" alignItems="center" px="40px" pt="24px">
         <Stack direction="row" justifyContent="center" alignItems="center">
           <img src={Logo} alt="logo" width="60px" height="40px" />

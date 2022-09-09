@@ -1,8 +1,8 @@
 import React from "react";
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Button, Grid, Stack, Typography } from "@mui/material";
 import WhyCard from "./WhyCard/WhyCard";
 
-function WhyUs() {
+function WhyUs({ navigate }) {
   const cardContentData = [
     {
       title: "Suitable Pass For You",
@@ -17,6 +17,12 @@ function WhyUs() {
       body: "Start your journey easily online. Cancel anytime, you’re in control.",
     },
   ];
+
+  function handleClick(e) {
+    e.preventDefault();
+    navigate("/pass");
+  }
+
   return (
     <Box
       className="heroBanner"
@@ -46,6 +52,21 @@ function WhyUs() {
             <WhyCard key={id} id={id} cardContent={cardContent} />
           ))}
         </Grid>
+        <Button
+          variant="contained"
+          color="error"
+          onClick={handleClick}
+          sx={{
+            backgroundColor: "#ff2625",
+            p: "20px",
+            mt: "43px",
+            boxShadow: 6,
+          }}
+        >
+          <Typography variant="h6" fontWeight="bold">
+            Explore All Passes
+          </Typography>
+        </Button>
       </Stack>
     </Box>
   );

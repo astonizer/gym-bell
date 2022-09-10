@@ -2,15 +2,14 @@ import React from "react";
 import { Button, Grid, Stack, Typography } from "@mui/material";
 import ExploringPerson from "./ExploringPerson";
 
-function FindTrainer({ navigate }) {
+function ExploreExercises({ navigate }) {
   function handleClick(e) {
     e.preventDefault();
-    navigate("/trainer");
+    navigate("/exercise");
   }
 
   return (
     <Stack
-      className="addGym"
       direction="row"
       justifyContent="center"
       alignItems="center"
@@ -59,4 +58,4 @@ function FindTrainer({ navigate }) {
   );
 }
 
-export default FindTrainer;
+export default ExploreExercises;

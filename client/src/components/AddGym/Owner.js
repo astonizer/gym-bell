@@ -4,7 +4,7 @@ function Owner() {
   return (
     <svg
       className="gym-owner"
-      width="40vw"
+      width="34vw"
       height="60vh"
       xmlns="http://www.w3.org/2000/svg"
       viewBox="0 0 1020 669"

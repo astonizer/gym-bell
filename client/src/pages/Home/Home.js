@@ -15,7 +15,7 @@ function Home({ navigate }) {
       <HeroBanner navigate={navigate} />
       <WhyUs navigate={navigate} />
       <Stats />
-      <ExploreExercises />
+      <ExploreExercises navigate={navigate} />
       <FindTrainer navigate={navigate} />
       <AddGym navigate={navigate} />
       <StayUpdated />

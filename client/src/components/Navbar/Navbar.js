@@ -17,12 +17,6 @@ function Navbar({ navigate }) {
     navigate("/");
   }
 
-  function scrollToExercises() {
-    document.getElementById("exercises").scrollIntoView({
-      behavior: "smooth",
-    });
-  }
-
   return (
     <Stack
       className="navbar"
@@ -34,35 +28,41 @@ function Navbar({ navigate }) {
         p: { sm: "15px", xs: "22px" },
       }}
       px="20px"
+      m="auto"
     >
-      <Link to="/">
-        <img src={Logo} alt="logo" className="navbar-logo" />
-      </Link>
-      <Stack direction="row" gap="40px" fontSize="24px" alignItems="flex-end">
-        <Link to="/" className="navbar-link navbar-link-active">
-          Home
+      <Stack
+        width="400px"
+        sx={{ width: { xl: "1488px" } }}
+        m="auto"
+        direction="row"
+        justifyContent="space-between"
+        alignItems="center"
+      >
+        <Link to="/">
+          <img src={Logo} alt="logo" className="navbar-logo" />
         </Link>
-        <Link
-          to="#exercises"
-          className="navbar-link"
-          onClick={scrollToExercises}
-        >
-          Exercises{" "}
-        </Link>
-        {isAuthenticated ? (
-          <Link to="#" className="navbar-link" onClick={handleLogout}>
-            Logout{" "}
+        <Stack direction="row" gap="40px" fontSize="24px" alignItems="flex-end">
+          <Link to="/" className="navbar-link navbar-link-active">
+            Home
           </Link>
-        ) : (
-          <>
-            <Link to="/register" className="navbar-link">
-              Register{" "}
+          <Link to="/exercise" className="navbar-link">
+            Exercises
+          </Link>
+          {isAuthenticated ? (
+            <Link to="#" className="navbar-link" onClick={handleLogout}>
+              Logout{" "}
             </Link>
-            <Link to="/login" className="navbar-link">
-              Login{" "}
-            </Link>
-          </>
-        )}
+          ) : (
+            <>
+              <Link to="/register" className="navbar-link">
+                Register{" "}
+              </Link>
+              <Link to="/login" className="navbar-link">
+                Login{" "}
+              </Link>
+            </>
+          )}
+        </Stack>
       </Stack>
     </Stack>
   );

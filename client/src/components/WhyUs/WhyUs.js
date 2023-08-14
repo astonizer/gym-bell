@@ -47,9 +47,11 @@ function WhyUs({ navigate }) {
           We are a network of gyms all around the world. With our special pass,
           you can access fitness in any way you want at very affordable prices.
         </Typography>
-        <Grid container>
+        <Grid container spacing={2}>
           {cardContentData.map((cardContent, id) => (
-            <WhyCard key={id} id={id} cardContent={cardContent} />
+            <Grid item xs={12} md={4} key={id}>
+              <WhyCard id={id} cardContent={cardContent} />
+            </Grid>
           ))}
         </Grid>
         <Button

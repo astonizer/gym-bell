@@ -11,6 +11,7 @@ function Banner() {
       viewBox="0 0 1020 669"
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      style={{ position: "absolute", bottom: 0, zIndex: -1 }}
     >
       <g id="banner 1" clipPath="url(#clip0_2_2)">
         <path

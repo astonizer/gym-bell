@@ -28,6 +28,7 @@ function WhyCard({ cardContent, id }) {
   }
   return (
     <Grid
+      item
       xs={12}
       md={4}
       sx={{
